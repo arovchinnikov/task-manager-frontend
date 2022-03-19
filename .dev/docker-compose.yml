@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: frontend
+    build: ./app
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../:/app
+    command:  bash -c "yarn serve"
